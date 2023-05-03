@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   output:'export',
   basePath: '/where-is-my-ether',
+  assetPrefix: '/where-is-my-ether/',
   images:{
     unoptimized:true,
   }
