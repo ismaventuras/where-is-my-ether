@@ -1,5 +1,6 @@
 import { getBalances } from "@/lib/balances";
 import { useEffect, useState } from "react";
+import { formatEther } from "viem";
 
 type State = {
     balances: Balance[] | null;
@@ -12,7 +13,7 @@ export function BalancePerChain({ balance }: { balance: Balance }) {
         <div key={balance.chainName} className=" border rounded-lg border-slate-800 dark:border-slate-200">
             <div className="p-2">
                 <p className=" font-semibold text-2xl ">{balance.chainName}</p>
-                <p className=" text-2xl">{balance.ether.toString()} ETH</p>
+                <p className=" text-2xl">{formatEther(balance.ether)} ETH</p>
             </div>
         </div>
     )
